@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [Suite]">
+  <test name="Test(failed)">
+    <classes>
+      <class name="TestPackage.ValidateSignUpPage">
+        <methods>
+          <include name="bsuite"/>
+          <include name="CheckHomePage"/>
+        </methods>
+      </class> <!-- TestPackage.ValidateSignUpPage -->
+      <class name="TestPackage.ValidateLoginPage">
+        <methods>
+          <include name="CheckHomePage"/>
+          <include name="preConditions"/>
+        </methods>
+      </class> <!-- TestPackage.ValidateLoginPage -->
+      <class name="TestPackage.ValidateCarSearch">
+        <methods>
+          <include name="CheckCarSearch"/>
+          <include name="preConditions"/>
+        </methods>
+      </class> <!-- TestPackage.ValidateCarSearch -->
+      <class name="TestPackage.ValidateHotelSearch">
+        <methods>
+          <include name="CheckHotelSearch"/>
+          <include name="preConditions"/>
+        </methods>
+      </class> <!-- TestPackage.ValidateHotelSearch -->
+      <class name="TestPackage.ValidateCarBookingAsGuest">
+        <methods>
+          <include name="BookAsGuest"/>
+          <include name="preConditions"/>
+        </methods>
+      </class> <!-- TestPackage.ValidateCarBookingAsGuest -->
+      <class name="TestPackage.ValidateCarBookingAsUser">
+        <methods>
+          <include name="BookAsExistingUser"/>
+          <include name="preConditions"/>
+        </methods>
+      </class> <!-- TestPackage.ValidateCarBookingAsUser -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

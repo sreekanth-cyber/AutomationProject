@@ -13,7 +13,7 @@
     </Console>
   </Appenders>
   <Loggers>
-  <Logger name="alpha.Demo" level="error" additivity="false">
+  <Logger name="TestPackage.ValidateSignUpPage" level="error" additivity="false">
       <AppenderRef ref="File"/>
     </Logger>
     <Root level="trace">

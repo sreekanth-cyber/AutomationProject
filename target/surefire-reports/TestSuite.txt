@@ -1,0 +1,40 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 75.635 s <<< FAILURE! - in TestSuite
+feature(cucumberOptions.TestRunner)  Time elapsed: 36.416 s  <<< FAILURE!
+cucumber.runtime.CucumberException: 
+org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a href="https://www.phptravels.net/cars/united-kingdom/manchester/Kia-Pacanto-2014?&amp;pickupLocation=7&amp;dropoffLocation=7&amp;pickupDate=29/11/2019&amp;pickupTime=09:00&amp;dropoffDate=03/12/2019&amp;dropoffTime=18:00" class="btn btn-primary btn-sm btn-wide">...</a> is not clickable at point (905, 482). Other element would receive the click: <div id="usertrack-consent" style="background: white; border-radius: 5px; box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 5px; z-index: 10001; position: fixed; right: 20px; bottom: 20px; font-family: Arial; text-align: center; transform-origin: right center; width: 350px; padding: 20px; opacity: 1; transform: scaleX(1); transition: opacity 0.2s ease-out 0s, transform 0.2s ease-out 0s;">...</div>
+  (Session info: chrome=78.0.3904.87)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'CBT-MH-000', ip: '192.168.84.1', os.name: 'Windows 8.1', os.arch: 'x86', os.version: '6.3', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.87, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Windows\TEMP\scoped_dir9...}, goog:chromeOptions: {debuggerAddress: localhost:54491}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: d7a132cd9d78e534f67eac4bf5f39f32
+Caused by: org.openqa.selenium.ElementClickInterceptedException: 
+element click intercepted: Element <a href="https://www.phptravels.net/cars/united-kingdom/manchester/Kia-Pacanto-2014?&amp;pickupLocation=7&amp;dropoffLocation=7&amp;pickupDate=29/11/2019&amp;pickupTime=09:00&amp;dropoffDate=03/12/2019&amp;dropoffTime=18:00" class="btn btn-primary btn-sm btn-wide">...</a> is not clickable at point (905, 482). Other element would receive the click: <div id="usertrack-consent" style="background: white; border-radius: 5px; box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 5px; z-index: 10001; position: fixed; right: 20px; bottom: 20px; font-family: Arial; text-align: center; transform-origin: right center; width: 350px; padding: 20px; opacity: 1; transform: scaleX(1); transition: opacity 0.2s ease-out 0s, transform 0.2s ease-out 0s;">...</div>
+  (Session info: chrome=78.0.3904.87)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'CBT-MH-000', ip: '192.168.84.1', os.name: 'Windows 8.1', os.arch: 'x86', os.version: '6.3', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.87, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Windows\TEMP\scoped_dir9...}, goog:chromeOptions: {debuggerAddress: localhost:54491}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: d7a132cd9d78e534f67eac4bf5f39f32
+
+feature(cucumberOptions.TestRunner)  Time elapsed: 37.574 s  <<< FAILURE!
+cucumber.runtime.CucumberException: 
+org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a href="https://www.phptravels.net/cars/united-kingdom/manchester/Kia-Pacanto-2014?&amp;pickupLocation=7&amp;dropoffLocation=7&amp;pickupDate=29/11/2019&amp;pickupTime=09:00&amp;dropoffDate=03/12/2019&amp;dropoffTime=18:00" class="btn btn-primary btn-sm btn-wide">...</a> is not clickable at point (905, 482). Other element would receive the click: <div id="usertrack-consent" style="background: white; border-radius: 5px; box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 5px; z-index: 10001; position: fixed; right: 20px; bottom: 20px; font-family: Arial; text-align: center; transform-origin: right center; width: 350px; padding: 20px; opacity: 1; transform: scaleX(1); transition: opacity 0.2s ease-out 0s, transform 0.2s ease-out 0s;">...</div>
+  (Session info: chrome=78.0.3904.87)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'CBT-MH-000', ip: '192.168.84.1', os.name: 'Windows 8.1', os.arch: 'x86', os.version: '6.3', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.87, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Windows\TEMP\scoped_dir1...}, goog:chromeOptions: {debuggerAddress: localhost:54562}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 6b7bdbab7cbef012723ab2358a5c1da2
+Caused by: org.openqa.selenium.ElementClickInterceptedException: 
+element click intercepted: Element <a href="https://www.phptravels.net/cars/united-kingdom/manchester/Kia-Pacanto-2014?&amp;pickupLocation=7&amp;dropoffLocation=7&amp;pickupDate=29/11/2019&amp;pickupTime=09:00&amp;dropoffDate=03/12/2019&amp;dropoffTime=18:00" class="btn btn-primary btn-sm btn-wide">...</a> is not clickable at point (905, 482). Other element would receive the click: <div id="usertrack-consent" style="background: white; border-radius: 5px; box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 5px; z-index: 10001; position: fixed; right: 20px; bottom: 20px; font-family: Arial; text-align: center; transform-origin: right center; width: 350px; padding: 20px; opacity: 1; transform: scaleX(1); transition: opacity 0.2s ease-out 0s, transform 0.2s ease-out 0s;">...</div>
+  (Session info: chrome=78.0.3904.87)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'CBT-MH-000', ip: '192.168.84.1', os.name: 'Windows 8.1', os.arch: 'x86', os.version: '6.3', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.87, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Windows\TEMP\scoped_dir1...}, goog:chromeOptions: {debuggerAddress: localhost:54562}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 6b7bdbab7cbef012723ab2358a5c1da2
+

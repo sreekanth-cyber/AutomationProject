@@ -1,14 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-  <test name="Test">
+  <test name="Test1">
+    <classes>
+      <class name="TestPackage.ValidateSignUpPage"/>
+    </classes>
+  </test>
+  <test name="Test2">
+    <classes>
+      <class name="TestPackage.ValidateLoginPage"/>
+    </classes>
+  </test>
+  <test name="Test3">
+    <classes>
+      <class name="TestPackage.ValidateCarSearch"/>
+    </classes>
+  </test>
+  <test name="Test4">
+    <classes>
+      <class name="TestPackage.ValidateCarBookingAsGuest"/>
+    </classes>
+  </test>
+  <test name="Test5">
     <classes>
       <class name="TestPackage.ValidateCarBookingAsUser"/>
-      <class name="TestPackage.ValidateLoginPage"/>
-      <class name="TestPackage.ValidateSignUpPage"/>
-      <class name="TestPackage.ValidateHotelSearch"/>
-      <class name="TestPackage.ValidateCarSearch"/>
-      <class name="TestPackage.ValidateCarBookingAsGuest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

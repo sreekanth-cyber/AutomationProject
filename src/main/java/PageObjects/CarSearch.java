@@ -1,96 +1,93 @@
 package PageObjects;
 
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.Select;
 
-public class CarSearch {
+import junit.framework.Assert;
+import resources.base;
+
+public class CarSearch extends base{
 	WebDriver driver;
-	Properties prop;
 	
-	By BookNow = By.xpath("//button[@class='btn btn-block btn-action btn-lg']");
-	By Details = By.xpath("//button[@class='btn btn-action loader loader btn-block br25']");
-	By CarBtn = By.xpath("//a[@title='Cars']");
-	By PickUp = By.xpath("//div[@id='s2id_carlocations']//a[@class='select2-choice']");
-	By location = By.xpath("//div[contains(text(),'Manchester')]");
-	By Cookie = By.cssSelector("button[id='cookyGotItBtn']");
-	By Submit = By.xpath("//div[@class='bgfade col-md-2 form-group go-right col-xs-12 search-button']//button[@class='btn-primary btn btn-lg btn-block pfb0 loader'][contains(text(),'Search')]");
+	By CarBtn = By.xpath("//a[contains(text(),'Transfer')]");
+	By PickUp = By.xpath("//div[@id='carlocations_chosen']");
+	By PickUpTime = By.xpath("//div[@id='transfer']//div[3]//div[1]//div[1]//div[2]//div[1]//div[2]");
+	By DropTime = By.xpath("//div[@id='transfer']//div[4]//div[1]//div[1]//div[2]//div[1]//div[2]");
+	By Cookie = By.xpath("//button[@class='cc-btn cc-dismiss']");
+	By Submit = By.xpath("//div[@class='col-md-2 col-xs-12']//button[@class='btn-primary btn btn-block'][contains(text(),'Search')]");
+	By Details = By.xpath("//a[@class='btn btn-primary btn-sm btn-wide']");
+	By BookNow = By.xpath("//button[@class='btn btn-secondary btn-block mt-20']");
 	
 	public CarSearch(WebDriver driver)
 	{
 		this.driver = driver;
 	}
 	
-	public void Search() throws IOException
+	public void Search() throws Exception
 	{
-		prop = new Properties();
-		FileInputStream fis = new FileInputStream("C:\\sree\\MyProject\\src\\main\\java\\resources\\data.properties");
-		prop.load(fis);
+		properties();
 				
+		JavascriptExecutor js = (JavascriptExecutor) driver;
 		driver.findElement(CarBtn).click();
 		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+		js.executeScript("window.scrollBy(0,50)");
 		driver.findElement(PickUp).click();
-		driver.findElement(location).click();
-		driver.findElement(By.xpath("//input[@id='departcar']")).click();
+		driver.findElement(By.xpath("//li[contains(text(),'Manchester')]")).click();
 		
-		while(!driver.findElement(By.xpath("//div[12]//div[1]//tr[1]//th[2]")).getText().contains(prop.getProperty("Pick_up_month")))
+		driver.findElement(By.xpath("//input[@id='dropdate']")).click();
+		while(!driver.findElement(By.xpath("/html[1]/body[1]/div[3]/div[3]/nav[1]/div[2]")).getText().contains(prop.getProperty("Pick_up_month")))
 		{
-			driver.findElement(By.xpath("//div[12]//div[1]//tr[1]//th[3]")).click();
+			driver.findElement(By.xpath("//div[@id='datepickers-container']//div[3]//nav[1]//div[3]")).click();
 		}
 		
-		int count = driver.findElements(By.className("day")).size();
+		int count = driver.findElements(By.xpath("//div[@class='datepicker--cell datepicker--cell-day']")).size();
 		System.out.println(count);
 		for(int i=0;i<count;i++)
 		{
-			String text = driver.findElements(By.className("day")).get(i).getText();
+			String text = driver.findElements(By.xpath("//div[@class='datepicker--cell datepicker--cell-day']")).get(i).getText();
 			if(text.equals(prop.getProperty("Pick_up_date")))
 			{
-				driver.findElements(By.className("day")).get(i).click();
+				driver.findElements(By.xpath("//div[@class='datepicker--cell datepicker--cell-day']")).get(i).click();
+				break;
 			}
 		}
 		
-		driver.findElement(By.name("pickupTime")).click();
+		driver.findElement(PickUpTime).click();
+		driver.findElement(By.xpath("//div[@id='transfer']//div[3]//div[1]//div[1]//div[2]//div[1]//div[2]//div[1]//div[1]//div[1]//input[1]")).sendKeys("09:00");
+		driver.findElement(By.xpath("//div[@id='transfer']//div[3]//div[1]//div[1]//div[2]//div[1]//div[2]//div[1]//div[1]//div[1]//input[1]")).sendKeys(Keys.ENTER);
 		
-		Select drpdwn1 = new Select(driver.findElement(By.name("pickupTime")));
-		drpdwn1.selectByVisibleText("09:00");
+		driver.findElement(By.xpath("//input[@id='returndate']")).click();
 		
-		driver.findElement(By.xpath("//input[@id='returncar']")).click();
-		int j=0;
-		while(!driver.findElement(By.xpath("//div[13]//div[1]//tr[1]//th[2]")).getText().contains(prop.getProperty("drop_up_month")))
+		while(!driver.findElement(By.xpath("//div[4]//nav[1]//div[2]")).getText().contains(prop.getProperty("drop_up_month")))
 		{
-			driver.findElement(By.xpath("//div[13]//div[1]//tr[1]//th[3]")).click();
-			j++;
-			if(j>5) break;
-		}
-		while(!driver.findElement(By.xpath("//div[13]//div[1]//tr[1]//th[2]")).getText().contains("drop_up_month"))
-		{
-			driver.findElement(By.xpath("//div[13]//div[1]//tr[1]//th[1]")).click();
+			driver.findElement(By.xpath("//div[4]//nav[1]//div[3]")).click();
 		}
 		
 		for(int i=0;i<count;i++)
 		{
-			String text = driver.findElements(By.className("day")).get(i).getText();
+			String text = driver.findElements(By.xpath("//div[@class='datepicker--cell datepicker--cell-day']")).get(i).getText();
 			if(text.equals(prop.getProperty("drop_up_date")))
 			{
-				driver.findElements(By.className("day")).get(i).click();
+				driver.findElements(By.xpath("//div[@class='datepicker--cell datepicker--cell-day']")).get(i).click();
+				break;
 			}
 		}
+	
+		driver.findElement(DropTime).click();
+		driver.findElement(By.xpath("//div[@id='transfer']//div[4]//div[1]//div[1]//div[2]//div[1]//div[2]//div[1]//div[1]//div[1]//input[1]")).sendKeys("18:00");
+		driver.findElement(By.xpath("//div[@id='transfer']//div[4]//div[1]//div[1]//div[2]//div[1]//div[2]//div[1]//div[1]//div[1]//input[1]")).sendKeys(Keys.ENTER);
 		
-		driver.findElement(By.name("dropoffTime")).click();
-		
-		Select drpdwn2 = new Select(driver.findElement(By.name("dropoffTime")));
-		drpdwn2.selectByVisibleText("18:00");
-		
+		Assert.assertTrue(driver.findElement(Submit).isDisplayed());
 		driver.findElement(Submit).click();
 		
 		driver.findElement(Details).click();
-
-		driver.findElement(Cookie).click();
+		
+		js.executeScript("window.scrollBy(0,1500)");
+		Assert.assertTrue(driver.findElement(BookNow).isDisplayed());
 		driver.findElement(BookNow).click();
 		
 	}

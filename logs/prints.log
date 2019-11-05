@@ -1,3 +1,6 @@
-16:46:37.450 [main] INFO  resources.base - Successfully verified myaccount button
-16:47:01.645 [main] INFO  resources.base - Successfully verified myaccount button
-16:54:32.462 [main] INFO  resources.base - Successfully verified myaccount button
+10:43:30.964 [main] INFO  resources.base - Successfully verified CarSearch Page
+10:43:35.167 [main] INFO  resources.base - Successfully verified CarBookingAsGuest Page
+10:51:47.423 [main] INFO  resources.base - Successfully Logged in
+10:52:51.323 [main] INFO  resources.base - Successfully verified LogOut Page
+11:18:17.658 [main] INFO  resources.base - Successfully Logged in
+11:18:38.674 [main] INFO  resources.base - Successfully verified LogOut Page

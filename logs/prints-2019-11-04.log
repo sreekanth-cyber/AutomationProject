@@ -1,0 +1,7 @@
+12:57:29.324 [main] INFO  resources.base - Successfully verified CarSearch Page
+12:57:32.842 [main] INFO  resources.base - Successfully verified CarBookingAsExistingUser Page
+12:59:46.935 [main] INFO  resources.base - Successfully verified CarSearch Page
+12:59:52.978 [main] INFO  resources.base - Successfully verified CarBookingAsGuest Page
+13:13:37.723 [main] INFO  resources.base - Successfully Logged in
+13:13:57.700 [main] INFO  resources.base - Successfully verified LogOut Page
+13:21:53.440 [main] INFO  resources.base - Successfully Logged in

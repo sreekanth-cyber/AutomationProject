@@ -1,5 +1,6 @@
 package TestPackage;
 
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -21,8 +22,11 @@ public class ValidateCarSearch extends base{
 	{
 		CarSearch c = new CarSearch(driver);
 		c.Search();
-		
-		log1.info("Successfully verified CarSearch Page");
+		log.info("Successfully verified CarSearch Page");
+	}
+	@AfterTest
+	public void close()
+	{
 		driver.close();
 	}
 }
